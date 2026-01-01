@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - Shopping made simple and smart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">🛒 ShopEase</div>
+    <p class="tagline">Shopping made simple and smart.</p>
+    <button id="settingsBtn">⚙️</button>
+    <div id="settingsMenu" class="hidden">
+      <label>Language:
+        <select>
+          <option>English</option>
+          <option>Amharic</option>
+          <option>French</option>
+        </select>
+      </label>
+      <label>Currency:
+        <select>
+          <option>USD</option>
+          <option>ETB</option>
+          <option>EUR</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <!-- Login/Signup -->
+  <section id="auth">
+    <h2>Login / Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Email or Phone">
+      <input type="password" placeholder="Password">
+      <div class="auth-buttons">
+        <button type="submit" class="btn-primary">Login</button>
+        <button type="button" class="btn-secondary">Sign Up</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Product Gallery -->
+  <section id="products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card" onclick="showDetails('Laptop')">
+        <img src="https://via.placeholder.com/200" alt="Laptop">
+        <h3>Laptop</h3>
+        <p class="price">$800</p>
+      </div>
+      <div class="product-card" onclick="showDetails('Shoes')">
+        <img src="https://via.placeholder.com/200" alt="Shoes">
+        <h3>Shoes</h3>
+        <p class="price">$50</p>
+      </div>
+      <div class="product-card" onclick="showDetails('Headphones')">
+        <img src="https://via.placeholder.com/200" alt="Headphones">
+        <h3>Headphones</h3>
+        <p class="price">$120</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Details -->
+  <section id="details" class="hidden">
+    <div class="details-card">
+      <h2>Product Details</h2>
+      <p id="detailText"></p>
+      <button onclick="closeDetails()" class="btn-secondary">Close</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 ShopEase. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
